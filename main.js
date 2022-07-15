@@ -29,6 +29,8 @@ right:document.getElementById('right').addEventListener('click',()=>{
   if(parseInt(style.marginLeft)<0){
     let new_margin = parseInt(style.marginLeft)+200
     document.getElementById('holder').style.marginLeft=new_margin+'px'
+    document.getElementById('left').style.display='inline'   
+    document.getElementById('holder').style.marginTop='0px'
   }
 }),
 left:document.getElementById('left').addEventListener('click',()=>{
@@ -37,6 +39,10 @@ left:document.getElementById('left').addEventListener('click',()=>{
   if(parseInt(style.marginLeft)>-1000){
     let new_margin = parseInt(style.marginLeft)-200
     document.getElementById('holder').style.marginLeft=new_margin+'px'
+  }
+  if(parseInt(style.marginLeft)==-1000){
+    document.getElementById('left').style.display='none'
+    document.getElementById('holder').style.marginTop='250px'
   }
 })
 }
